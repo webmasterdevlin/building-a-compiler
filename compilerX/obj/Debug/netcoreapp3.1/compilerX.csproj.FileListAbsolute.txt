@@ -1,0 +1,13 @@
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\bin\Debug\netcoreapp3.1\compilerX.exe
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\bin\Debug\netcoreapp3.1\compilerX.deps.json
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\bin\Debug\netcoreapp3.1\compilerX.runtimeconfig.json
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\bin\Debug\netcoreapp3.1\compilerX.runtimeconfig.dev.json
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\bin\Debug\netcoreapp3.1\compilerX.dll
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\bin\Debug\netcoreapp3.1\compilerX.pdb
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\obj\Debug\netcoreapp3.1\compilerX.csprojAssemblyReference.cache
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\obj\Debug\netcoreapp3.1\compilerX.AssemblyInfoInputs.cache
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\obj\Debug\netcoreapp3.1\compilerX.AssemblyInfo.cs
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\obj\Debug\netcoreapp3.1\compilerX.csproj.CoreCompileInputs.cache
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\obj\Debug\netcoreapp3.1\compilerX.dll
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\obj\Debug\netcoreapp3.1\compilerX.pdb
+C:\Users\devduldu\Desktop\building-a-compiler\compilerX\obj\Debug\netcoreapp3.1\compilerX.genruntimeconfig.cache
