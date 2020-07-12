@@ -9,7 +9,7 @@ namespace CompilerX
     {
         static void Main(string[] args)
         {
-            bool showTree = false;
+            var showTree = false;
             
             while (true)
             {
@@ -18,17 +18,15 @@ namespace CompilerX
                 if (string.IsNullOrWhiteSpace(line))
                     return;
 
-                if (line == "#showTree")
+                switch (line)
                 {
-                    showTree = !showTree;
-                    Console.WriteLine(showTree ? "Showing parse trees." : "Nor showing parse trees");
-                    continue;
-                }
-
-                else if(line == "#cls")
-                {
-                    Console.Clear();
-                    continue;
+                    case "#showTree":
+                        showTree = !showTree;
+                        Console.WriteLine(showTree ? "Showing parse trees." : "Nor showing parse trees");
+                        continue;
+                    case "#cls":
+                        Console.Clear();
+                        continue;
                 }
                 
                 var syntaxTree = SyntaxTree.Parse(line);
@@ -60,7 +58,7 @@ namespace CompilerX
             }
         }
 
-        public static void PrettyPrint(SyntaxNode node, string indent = "", bool isLast = true)
+        private static void PrettyPrint(SyntaxNode node, string indent = "", bool isLast = true)
         {
             var marker = isLast ? "└──" : "├──";
             Console.Write(indent);

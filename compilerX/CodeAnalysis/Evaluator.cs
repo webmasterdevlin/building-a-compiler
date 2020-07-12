@@ -18,32 +18,29 @@ namespace CompilerX.CodeAnalysis
 
         private int EvaluateExpression(ExpressionSyntax node)
         {
-            if (node is NumberExpressionSyntax n)
+            switch (node)
             {
-                return (int) n.NumberToken.Value;
-            }
-            
-            else if (node is BinaryExpressionSyntax b)
-            {
-                var left = EvaluateExpression(b.Left);
-                var right = EvaluateExpression(b.Right);
-
-                return b.OperatorToken.Kind switch
+                case NumberExpressionSyntax n:
+                    return (int) n.NumberToken.Value;
+                case BinaryExpressionSyntax b:
                 {
-                    SyntaxKind.PlusToken => left + right,
-                    SyntaxKind.MinusToken => left - right,
-                    SyntaxKind.StarToken => left * right,
-                    SyntaxKind.SlashToken => left / right,
-                    _ => throw new Exception($"Unexpected binary operator {b.OperatorToken.Kind}")
-                };
-            }
+                    var left = EvaluateExpression(b.Left);
+                    var right = EvaluateExpression(b.Right);
 
-            if (node is ParenthesizedExpressionSyntax p)
-                return EvaluateExpression(p.Expression);
-            
-            else
-                throw new Exception($"Unexpected node {node.Kind}");
-            
+                    return b.OperatorToken.Kind switch
+                    {
+                        SyntaxKind.PlusToken => left + right,
+                        SyntaxKind.MinusToken => left - right,
+                        SyntaxKind.StarToken => left * right,
+                        SyntaxKind.SlashToken => left / right,
+                        _ => throw new Exception($"Unexpected binary operator {b.OperatorToken.Kind}")
+                    };
+                }
+                case ParenthesizedExpressionSyntax p:
+                    return EvaluateExpression(p.Expression);
+                default:
+                    throw new Exception($"Unexpected node {node.Kind}");
+            }
         }
     }
     
